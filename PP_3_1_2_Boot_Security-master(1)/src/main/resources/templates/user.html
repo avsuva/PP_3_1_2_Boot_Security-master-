@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>User</title>
+    <style>
+        table th, table td, form {
+            padding: 10px 5px;
+            font-family: sans-serif;
+            font-size: 14px;
+            border-style: solid;
+            border-width: 2px;
+            background: #ECE9E0;
+            color: #656665;
+        }
+        .buttonLogout {
+            padding: 5px;
+            background-color: lightpink;
+        }
+    </style>
+</head>
+<body>
+<b> <font size="1"> <h1> User's data </h1></font> </b>
+<table border="1">
+    <tr>
+        <th th:width="30">ID</th>
+        <th th:width="100">Username</th>
+        <th th:width="100">Email</th>
+        <th th:width="100">Password</th>
+    </tr>
+
+    <tr th:each="user : ${user}"> </tr>
+
+    <td th:utext="${user.getId()}">Id</td>
+    <td th:utext="${user.username}">Username</td>
+    <td th:utext="${user.email}">Email</a></td>
+    <td th:utext="${user.password}">Password</td>
+
+</table>
+<br>
+<button class="buttonLogout" onclick="window.location.href = '/login';">Logout</button>
+</body>
+</html>
