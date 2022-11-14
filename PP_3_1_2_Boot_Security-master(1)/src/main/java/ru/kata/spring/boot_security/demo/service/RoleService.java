@@ -12,4 +12,5 @@ public interface RoleService {
     List<Role> findAllRoles();
 
     Set<Role> findRoleById(ArrayList<Integer> roles);
+    void addRole(Role role);
 }
